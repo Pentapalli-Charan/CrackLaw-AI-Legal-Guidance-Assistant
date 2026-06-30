@@ -1,0 +1,221 @@
+/* ============================================
+   Why Choose Section
+   ============================================ */
+
+.why-choose {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-glass);
+  overflow: hidden;
+}
+
+.why-choose-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Abstract Legal Art */
+.why-choose-visual {
+  position: relative;
+  height: 500px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-glass);
+}
+
+.why-visual-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+}
+
+.why-visual-lines {
+  position: absolute;
+  inset: 0;
+}
+
+.why-visual-line {
+  position: absolute;
+  background: rgba(59, 130, 246, 0.08);
+  border-radius: 2px;
+}
+
+.why-visual-line:nth-child(1) {
+  width: 60%;
+  height: 1px;
+  top: 25%;
+  left: 20%;
+  transform: rotate(-15deg);
+}
+
+.why-visual-line:nth-child(2) {
+  width: 40%;
+  height: 1px;
+  top: 45%;
+  left: 30%;
+  transform: rotate(10deg);
+}
+
+.why-visual-line:nth-child(3) {
+  width: 50%;
+  height: 1px;
+  top: 65%;
+  left: 15%;
+  transform: rotate(-5deg);
+}
+
+.why-visual-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(59, 130, 246, 0.12);
+}
+
+.why-visual-circle:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  top: 20%;
+  left: 15%;
+}
+
+.why-visual-circle:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  right: 20%;
+}
+
+.why-visual-circle:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  bottom: 15%;
+  left: 40%;
+  background: rgba(59, 130, 246, 0.04);
+}
+
+.why-visual-scale {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  opacity: 0.08;
+  color: var(--gold);
+}
+
+.why-visual-badge {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow-md);
+}
+
+.why-visual-badge-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gold-gradient);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-visual-badge-text {
+  font-size: 0.78rem;
+}
+
+.why-visual-badge-text strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+/* Content Side */
+.why-choose-content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.why-choose-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why-choose-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.why-choose-item:hover {
+  background: var(--bg-glass);
+}
+
+.why-choose-item-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: var(--radius-md);
+  color: var(--gold);
+  transition: all var(--transition-base);
+}
+
+.why-choose-item:hover .why-choose-item-icon {
+  background: rgba(59, 130, 246, 0.15);
+  transform: scale(1.08);
+}
+
+.why-choose-item-text h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.why-choose-item-text p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .why-choose-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .why-choose-visual {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-visual {
+    height: 280px;
+  }
+
+  .why-choose-item {
+    padding: 14px;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "doc_3df79d34abbca993",
+  "original_filename": "dummy.pdf",
+  "file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\raw\\government_notifications\\dummy.pdf",
+  "document_title": "dummy",
+  "source": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+  "date_added": "2026-07-01 12:16:03",
+  "document_type": "government_notifications",
+  "language": "en",
+  "checksum": "3df79d34abbca99308e79cb94461c1893582604d68329a41fd4bec1885e6adb4",
+  "size_bytes": 13264,
+  "processing_status": "chunked",
+  "chunk_count": 1,
+  "embedding_status": "pending",
+  "error_log": null,
+  "processed_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\processed\\government_notifications\\doc_3df79d34abbca993.txt",
+  "cleaned_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\cleaned\\doc_3df79d34abbca993.txt",
+  "chunks_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\chunks\\doc_3df79d34abbca993_chunks.json"
+}

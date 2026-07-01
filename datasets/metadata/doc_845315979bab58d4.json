@@ -1,0 +1,19 @@
+{
+  "id": "doc_845315979bab58d4",
+  "original_filename": "sample_data.csv",
+  "file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\raw\\miscellaneous\\sample_data.csv",
+  "document_title": "sample_data",
+  "source": "external_source",
+  "date_added": "2026-07-01 12:17:13",
+  "document_type": "miscellaneous",
+  "language": "en",
+  "checksum": "845315979bab58d453e220900f0bc970ce08bb074e24450595dd474e6d8400d2",
+  "size_bytes": 145,
+  "processing_status": "chunked",
+  "chunk_count": 1,
+  "embedding_status": "pending",
+  "error_log": null,
+  "processed_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\processed\\miscellaneous\\doc_845315979bab58d4.txt",
+  "cleaned_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\cleaned\\doc_845315979bab58d4.txt",
+  "chunks_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\chunks\\doc_845315979bab58d4_chunks.json"
+}

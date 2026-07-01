@@ -1,0 +1,140 @@
+{
+  "paths": {
+    "datasets_dir": "datasets",
+    "raw_dir": "datasets/raw",
+    "processed_dir": "datasets/processed",
+    "cleaned_dir": "datasets/cleaned",
+    "chunks_dir": "datasets/chunks",
+    "embeddings_dir": "datasets/embeddings",
+    "metadata_dir": "datasets/metadata",
+    "cache_dir": "datasets/cache",
+    "downloads_dir": "datasets/downloads",
+    "logs_dir": "logs"
+  },
+  "logging": {
+    "level": "INFO",
+    "log_file": "logs/cracklaw.log"
+  },
+  "downloader": {
+    "auto_resume": true,
+    "max_retries": 3,
+    "verify_ssl": true,
+    "user_agent": "CrackLawDownloader/1.0"
+  },
+  "formats": [
+    "pdf",
+    "txt",
+    "docx",
+    "json",
+    "csv",
+    "html",
+    "xml"
+  ],
+  "cleaning": {
+    "remove_headers_footers": true,
+    "remove_page_numbers": true,
+    "normalize_whitespace": true,
+    "strip_ocr_artifacts": true,
+    "header_footer_patterns": [
+      "(?i)^\\s*(Page|Page\\s+\\d+|\\d+\\s+of\\s+\\d+)\\s*$",
+      "(?i)^\\s*CrackLaw.*$",
+      "(?i)^\\s*Confidential.*$",
+      "(?i)^\\s*Draft\\s*$",
+      "(?i)^\\s*All\\s+Rights\\s+Reserved\\s*$"
+    ]
+  },
+  "chunking": {
+    "semantic_split": true,
+    "max_chunk_words": 500,
+    "chunk_overlap_words": 50,
+    "paragraph_delimiter": "\n\n",
+    "hierarchy_regexes": {
+      "act": "(?i)^\\s*(?:THE\\s+)?(?:[A-Za-z0-9_\\s\\-]+)?ACT,\\s+\\d{4}\\s*(?:\\(ACT\\s+NO\\.\\s+\\d+\\s+OF\\s+\\d{4}\\)\\)?)*$",
+      "chapter": "(?i)^\\s*(?:CHAPTER|PART)\\s+([IVXLCDM\\d]+)\\s*.*$",
+      "section": "(?i)^\\s*(?:SECTION|SEC\\.)\\s+(\\d+[A-Za-z]?)\\.?\\s+.*$",
+      "subsection": "^\\s*\\((\\d+|[a-z]+)\\)\\s+.*$"
+    }
+  },
+  "embeddings": {
+    "provider": "sentence-transformers",
+    "model_name": "all-MiniLM-L6-v2",
+    "dimension": 384
+  },
+  "knowledge_acquisition": {
+    "enabled_adapters": [
+      "local_folder",
+      "huggingface",
+      "kaggle",
+      "url",
+      "indiacode",
+      "supreme_court"
+    ],
+    "retry_count": 3,
+    "timeout": 30,
+    "parallel_downloads": false,
+    "verification": {
+      "verify_checksum": true,
+      "detect_corruption": true,
+      "skip_duplicates": true
+    },
+    "classification": {
+      "laws": ["act", "amendment", "statute", "enactment", "legislation", "schedule", "constitution", "repeal"],
+      "judgments": ["versus", "vs.", "appeal", "respondent", "petitioner", "appellant", "court of", "hon'ble", "decree", "bench", "judgment"],
+      "contracts": ["agreement", "contract", "lease", "covenant", "warranty", "nda", "indemnification", "parties", "hereby agreed", "whereas"],
+      "legal_qa": ["question:", "answer:", "q:", "a:", "faq", "query", "response"],
+      "legal_nlp": ["token", "annotations", "ner", "tagger", "dataset", "corpus", "classification task", "labeled"],
+      "notifications": ["notification", "gazette", "circular", "public notice", "issued by the ministry", "orders of the government"],
+      "regulations": ["regulation", "guidelines", "compliance", "rulemaking", "directive", "standards"]
+    },
+    "datasets": [
+      {
+        "name": "w3c_dummy_pdf",
+        "description": "W3C PDF standard verification sample",
+        "source_type": "url",
+        "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+        "version": "1.0.0",
+        "license": "Public Domain",
+        "document_types": ["notifications"],
+        "supported_languages": ["en"]
+      },
+      {
+        "name": "sample_local_dataset",
+        "description": "Mock Local Dataset for folder scans",
+        "source_type": "local_folder",
+        "source_path": "datasets/downloads/local_import_test",
+        "version": "1.0.0",
+        "license": "Custom",
+        "document_types": ["contracts"],
+        "supported_languages": ["en"]
+      }
+    ]
+  },
+  "retrieval": {
+    "embedding_model": "bge",
+    "top_k": 5,
+    "similarity_threshold": 0.3,
+    "hybrid_mode": "hybrid",
+    "hybrid_weights": {
+      "semantic": 0.7,
+      "keyword": 0.3
+    },
+    "batch_size": 32,
+    "use_gpu": false,
+    "cache": {
+      "embedding_cache_size": 1000,
+      "query_cache_size": 500
+    },
+    "database": {
+      "host": "localhost",
+      "port": 5432,
+      "dbname": "cracklaw",
+      "user": "postgres",
+      "password": "password"
+    },
+    "reranking": {
+      "enabled": false,
+      "model_name": "BAAI/bge-reranker-base",
+      "rerank_depth": 10
+    }
+  }
+}

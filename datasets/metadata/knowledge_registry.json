@@ -1,0 +1,82 @@
+{
+  "test_source": {
+    "name": "test_source",
+    "description": "Mock source dataset",
+    "source_type": "local_folder",
+    "version": "1.0.0",
+    "license": "Apache",
+    "document_types": [
+      "laws"
+    ],
+    "supported_languages": [
+      "en"
+    ],
+    "download_status": "completed",
+    "last_updated": "2026-07-01 12:38:06",
+    "processing_status": "raw"
+  },
+  "test_dataset_registry": {
+    "name": "test_dataset_registry",
+    "description": "Mock description",
+    "source_type": "url",
+    "version": "2.1.0",
+    "license": "MIT",
+    "document_types": [
+      "contracts"
+    ],
+    "supported_languages": [
+      "en"
+    ],
+    "download_status": "completed",
+    "last_updated": "2026-07-01 12:38:06",
+    "processing_status": "processed"
+  },
+  "test_local_sync": {
+    "name": "test_local_sync",
+    "description": "",
+    "source_type": "local_folder",
+    "version": "1.0.0",
+    "license": "Custom",
+    "document_types": [
+      "contracts"
+    ],
+    "supported_languages": [
+      "en"
+    ],
+    "download_status": "completed",
+    "last_updated": "2026-07-01 12:38:06",
+    "processing_status": "raw"
+  },
+  "w3c_dummy_pdf": {
+    "name": "w3c_dummy_pdf",
+    "description": "W3C PDF standard verification sample",
+    "source_type": "url",
+    "version": "1.0.0",
+    "license": "Public Domain",
+    "document_types": [
+      "notifications"
+    ],
+    "supported_languages": [
+      "en"
+    ],
+    "download_status": "failed",
+    "last_updated": "2026-07-01 12:39:45",
+    "processing_status": "raw"
+  },
+  "sample_local_dataset": {
+    "name": "sample_local_dataset",
+    "description": "Mock Local Dataset for folder scans",
+    "source_type": "local_folder",
+    "version": "1.0.0",
+    "license": "Custom",
+    "document_types": [
+      "contracts"
+    ],
+    "supported_languages": [
+      "en"
+    ],
+    "download_status": "completed",
+    "last_updated": "2026-07-01 12:40:28",
+    "processing_status": "raw"
+  }
+}

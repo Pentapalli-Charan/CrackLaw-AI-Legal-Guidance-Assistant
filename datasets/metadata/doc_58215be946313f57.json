@@ -1,0 +1,19 @@
+{
+  "id": "doc_58215be946313f57",
+  "original_filename": "sample_judgment.xml",
+  "file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\raw\\judgments\\sample_judgment.xml",
+  "document_title": "sample_judgment",
+  "source": "external_source",
+  "date_added": "2026-07-01 12:17:13",
+  "document_type": "judgments",
+  "language": "en",
+  "checksum": "58215be946313f57fbf5c448043c97ee1188b9eea8adc01e7c196b9acd933c9f",
+  "size_bytes": 498,
+  "processing_status": "chunked",
+  "chunk_count": 1,
+  "embedding_status": "pending",
+  "error_log": null,
+  "processed_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\processed\\judgments\\doc_58215be946313f57.txt",
+  "cleaned_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\cleaned\\doc_58215be946313f57.txt",
+  "chunks_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\chunks\\doc_58215be946313f57_chunks.json"
+}

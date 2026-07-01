@@ -1,0 +1,19 @@
+{
+  "id": "doc_048653589a8f28ce",
+  "original_filename": "sample_act.txt",
+  "file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\raw\\laws\\sample_act.txt",
+  "document_title": "sample_act",
+  "source": "external_source",
+  "date_added": "2026-07-01 12:17:13",
+  "document_type": "laws",
+  "language": "en",
+  "checksum": "048653589a8f28ce6d7c3ced9ac195c63f697cffc4966d578080d270a2af0ae6",
+  "size_bytes": 605,
+  "processing_status": "chunked",
+  "chunk_count": 2,
+  "embedding_status": "pending",
+  "error_log": null,
+  "processed_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\processed\\laws\\doc_048653589a8f28ce.txt",
+  "cleaned_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\cleaned\\doc_048653589a8f28ce.txt",
+  "chunks_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\chunks\\doc_048653589a8f28ce_chunks.json"
+}

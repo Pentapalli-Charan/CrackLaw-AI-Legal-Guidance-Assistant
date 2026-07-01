@@ -1,0 +1,9 @@
+This document outlines guidelines for raw data collection and ingestion. These guidelines apply to all developers working on CrackLaw AI backend systems.
+
+1. Ingestion Requirements
+
+All files must undergo integrity check (MD5 or SHA-256).
+
+2. Chunking Requirements
+
+Documents should be chunked by Act, Chapter, or Section when possible.

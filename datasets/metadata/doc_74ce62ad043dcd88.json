@@ -1,0 +1,19 @@
+{
+  "id": "doc_74ce62ad043dcd88",
+  "original_filename": "sample_qa.json",
+  "file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\raw\\legal_qa\\sample_qa.json",
+  "document_title": "sample_qa",
+  "source": "external_source",
+  "date_added": "2026-07-01 12:17:13",
+  "document_type": "legal_qa",
+  "language": "en",
+  "checksum": "74ce62ad043dcd88c72dbcd628215c76b5b6626588dc75cb21ed7a9bb9d4d30e",
+  "size_bytes": 690,
+  "processing_status": "chunked",
+  "chunk_count": 1,
+  "embedding_status": "pending",
+  "error_log": null,
+  "processed_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\processed\\legal_qa\\doc_74ce62ad043dcd88.txt",
+  "cleaned_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\cleaned\\doc_74ce62ad043dcd88.txt",
+  "chunks_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\chunks\\doc_74ce62ad043dcd88_chunks.json"
+}

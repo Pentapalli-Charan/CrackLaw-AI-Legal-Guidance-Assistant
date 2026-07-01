@@ -1,0 +1,19 @@
+{
+  "id": "doc_2f3d4bf56c9de293",
+  "original_filename": "sample_contract.html",
+  "file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\raw\\contracts\\sample_contract.html",
+  "document_title": "MUTUAL NON-DISCLOSURE AGREEMENT",
+  "source": "external_source",
+  "date_added": "2026-07-01 12:17:13",
+  "document_type": "contracts",
+  "language": "en",
+  "checksum": "2f3d4bf56c9de293a750e6c9d78a2903ca2ba427a5b14899bf5eb33a0083b337",
+  "size_bytes": 606,
+  "processing_status": "chunked",
+  "chunk_count": 1,
+  "embedding_status": "pending",
+  "error_log": null,
+  "processed_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\processed\\contracts\\doc_2f3d4bf56c9de293.txt",
+  "cleaned_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\cleaned\\doc_2f3d4bf56c9de293.txt",
+  "chunks_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\chunks\\doc_2f3d4bf56c9de293_chunks.json"
+}

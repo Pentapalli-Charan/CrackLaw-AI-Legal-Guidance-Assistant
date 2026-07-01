@@ -1,0 +1,16 @@
+{
+  "id": "doc_b2e3613a4e587bb5",
+  "original_filename": "lease_agreement.txt",
+  "file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\raw\\contracts\\lease_agreement.txt",
+  "document_title": "lease_agreement",
+  "source": "manual_import",
+  "date_added": "2026-07-01 12:38:06",
+  "document_type": "contracts",
+  "language": "en",
+  "checksum": "b2e3613a4e587bb5f8eb275e0aa97e46daa2a33a7a9f8ac915135e2bd4461e4e",
+  "size_bytes": 87,
+  "processing_status": "raw",
+  "chunk_count": 0,
+  "embedding_status": "pending",
+  "error_log": null
+}

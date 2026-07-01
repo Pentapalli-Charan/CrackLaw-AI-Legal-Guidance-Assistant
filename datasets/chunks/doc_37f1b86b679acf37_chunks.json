@@ -1,0 +1,14 @@
+[
+  {
+    "chunk_id": "doc_37f1b86b679acf37_chunk_000",
+    "document_id": "doc_37f1b86b679acf37",
+    "source": "external_source",
+    "act": null,
+    "chapter": null,
+    "section": null,
+    "subsection": null,
+    "language": "en",
+    "text": "This document outlines guidelines for raw data collection and ingestion. These guidelines apply to all developers working on CrackLaw AI backend systems. 1. Ingestion Requirements All files must undergo integrity check (MD5 or SHA-256). 2. Chunking Requirements Documents should be chunked by Act, Chapter, or Section when possible.",
+    "word_count": 48
+  }
+]

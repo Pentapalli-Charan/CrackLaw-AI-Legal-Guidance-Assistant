@@ -1,0 +1,12 @@
+<judgment>
+  <court>Supreme Court of India</court>
+  <case_number>Civil Appeal No. 1234 of 2026</case_number>
+  <title>State of Karnataka v. Union of India</title>
+  <date>2026-06-15</date>
+  <judges>
+    <judge>Justice A. B. Shah</judge>
+    <judge>Justice C. D. Patel</judge>
+  </judges>
+  <body_text>The appeal is allowed. The judgment of the High Court is set aside.
+        We direct that the status quo be maintained.</body_text>
+</judgment>

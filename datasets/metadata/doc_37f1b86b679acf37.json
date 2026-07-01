@@ -1,0 +1,19 @@
+{
+  "id": "doc_37f1b86b679acf37",
+  "original_filename": "sample_doc.docx",
+  "file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\raw\\regulations\\sample_doc.docx",
+  "document_title": "sample_doc",
+  "source": "external_source",
+  "date_added": "2026-07-01 12:17:13",
+  "document_type": "regulations",
+  "language": "en",
+  "checksum": "37f1b86b679acf3729ce5e49b2aa2714c11819795d3cfd0dd97be0a8ea4ba661",
+  "size_bytes": 35571,
+  "processing_status": "chunked",
+  "chunk_count": 1,
+  "embedding_status": "pending",
+  "error_log": null,
+  "processed_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\processed\\regulations\\doc_37f1b86b679acf37.txt",
+  "cleaned_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\cleaned\\doc_37f1b86b679acf37.txt",
+  "chunks_file_path": "C:\\Users\\pchar\\OneDrive\\Desktop\\CrackLaw\\datasets\\chunks\\doc_37f1b86b679acf37_chunks.json"
+}

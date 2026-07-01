@@ -1,0 +1,37 @@
+{
+  "last_synchronization": "2026-07-01 12:40:28",
+  "summary": {
+    "total_documents": 12,
+    "total_chunks": 8,
+    "total_storage_size_mb": 0.05,
+    "raw_storage_mb": 0.05,
+    "processed_storage_mb": 0.0,
+    "cleaned_storage_mb": 0.0,
+    "chunks_storage_mb": 0.0,
+    "duplicate_count": 0,
+    "failed_downloads": 1
+  },
+  "document_types": {
+    "government_notifications": 1,
+    "contracts": 3,
+    "judgments": 1,
+    "laws": 4,
+    "legal_qa": 1,
+    "miscellaneous": 1,
+    "regulations": 1
+  },
+  "processing_progress": {
+    "chunked": 7,
+    "raw": 5
+  },
+  "sources": {
+    "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf": 1,
+    "external_source": 6,
+    "test_source": 1,
+    "manual_import": 1,
+    "test_local_sync": 1,
+    "test": 1,
+    "sample_local_dataset": 1
+  },
+  "knowledge_registry_datasets": 5
+}

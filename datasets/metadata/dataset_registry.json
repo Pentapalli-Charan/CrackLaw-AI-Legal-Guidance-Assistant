@@ -142,5 +142,17 @@
     "chunk_count": 0,
     "embedding_status": "pending",
     "date_added": "2026-07-01 12:40:28"
+  },
+  "doc_b5d966342c4d64ce": {
+    "id": "doc_b5d966342c4d64ce",
+    "original_filename": "doc_5ccddf2034062769.txt",
+    "document_title": "doc_5ccddf2034062769",
+    "source": "manual_upload",
+    "document_type": "manual_uploads",
+    "checksum": "b5d966342c4d64ce66c2bc5b60c0c311d5e7c3f14eee661bdddbbaf370eaefdf",
+    "processing_status": "raw",
+    "chunk_count": 0,
+    "embedding_status": "pending",
+    "date_added": "2026-07-01 22:12:29"
   }
 }

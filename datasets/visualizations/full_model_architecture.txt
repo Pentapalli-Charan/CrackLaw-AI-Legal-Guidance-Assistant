@@ -1,0 +1,23 @@
+====================================================
+             CRACKLAW TRANSFORMER                   
+====================================================
+                   [ ENCODER ]                      
+Source Tokens (Vocab: 5000)
+  ↓
+Encoder Stack (6 Layers)
+  ↓
+Encoder Context (d_model: 512)
+  ↓
+====================================================
+                   [ DECODER ]                      
+Target Tokens (Vocab: 5000)
+  ↓
+Decoder Stack (6 Layers) <---- [Cross Attention to Encoder Context]
+  ↓
+====================================================
+                   [ LM HEAD ]                      
+Linear Projection (512 -> 5000)
+Weight Tying: DISABLED
+  ↓
+Vocabulary Logits
+====================================================

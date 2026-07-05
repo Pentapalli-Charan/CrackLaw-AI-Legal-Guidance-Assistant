@@ -3,6 +3,32 @@ import sys
 import os
 import time
 
+# Load .env file if it exists (before any subprocess inherits the environment)
+def _load_dotenv():
+    env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+    if not os.path.exists(env_path):
+        return
+    try:
+        from dotenv import load_dotenv
+        load_dotenv(env_path, override=True)
+        print(f"[Launcher] Loaded environment from .env (via python-dotenv)")
+    except ImportError:
+        # Fallback: manually parse KEY=VALUE lines
+        with open(env_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#"):
+                    continue
+                if "=" in line:
+                    key, _, value = line.partition("=")
+                    key = key.strip()
+                    value = value.strip().strip('"').strip("'")
+                    if key and value:
+                        os.environ[key] = value
+        print(f"[Launcher] Loaded environment from .env (manual parse)")
+
+_load_dotenv()
+
 def main():
     print("==================================================")
     print("           CRACKLAW SYSTEM LAUNCHER               ")

@@ -1,0 +1,47 @@
+====================================================
+             TRANSFORMER ENCODER STACK              
+====================================================
+Input IDs -> Shape: (batch_size, seq_len)
+  ↓
+Input Representation (Vocab: 5000, Dim: 512)
+  ↓
+--- Encoder Block 1 ---
+    |-> Multi-Head Attention
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+--- Encoder Block 2 ---
+    |-> Multi-Head Attention
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+--- Encoder Block 3 ---
+    |-> Multi-Head Attention
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+--- Encoder Block 4 ---
+    |-> Multi-Head Attention
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+--- Encoder Block 5 ---
+    |-> Multi-Head Attention
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+--- Encoder Block 6 ---
+    |-> Multi-Head Attention
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+Final Layer Normalization
+  ↓
+Encoded Hidden States -> Shape: (batch_size, seq_len, 512)
+====================================================

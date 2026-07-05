@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment (contains API keys)
+.env
+
+# Python
+__pycache__/
+*.pyc

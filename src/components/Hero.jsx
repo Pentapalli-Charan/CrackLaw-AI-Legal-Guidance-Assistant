@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import {
   ArrowRight, Sparkles, Scale, Shield, Users, Send,
   BookOpen, CheckCircle2, Gavel
@@ -14,6 +15,7 @@ const fadeUp = {
 };
 
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <section className="hero section" id="home">
       {/* Background Effects */}
@@ -70,7 +72,7 @@ export default function Hero() {
             animate="visible"
             custom={3}
           >
-            <button className="btn-primary">
+            <button className="btn-primary" onClick={() => navigate('/chat')}>
               Start AI Consultation <ArrowRight size={16} />
             </button>
             <button className="btn-secondary">

@@ -1,0 +1,58 @@
+document_id,doc_type,act,judgment_title,source,text
+doc_048653589a8f28ce,laws,sample_act,,external_source,"THE AIR (PREVENTION AND CONTROL OF POLLUTION) ACT, 1981
+
+CHAPTER I
+PRELIMINARY
+
+Section 1. Short title, extent and commencement.
+(1) This Act may be called the Air (Prevention and Control of Pollution) Act, 1981.
+(2) It extends to the whole of India.
+
+Section 2. Definitions.
+In this Act, unless the context otherwise requires,—
+(a) ""air pollutant"" means any solid, liquid or gaseous substance present in the atmosphere.
+(b) ""air pollution"" means the presence in the atmosphere of any air pollutant.
+(c) ""approved appliance"" means any equipment or device used for the burning of any fuel."
+doc_2f3d4bf56c9de293,contracts,,,external_source,"MUTUAL NON-DISCLOSURE AGREEMENT
+MUTUAL NON-DISCLOSURE AGREEMENT
+This Mutual Non-Disclosure Agreement (""Agreement"") is entered into on this 1st day of July, 2026.
+1. Definition of Confidential Information
+""Confidential Information"" means any proprietary information disclosed by one party to another.
+2. Obligations of Receiving Party
+The receiving party shall maintain the confidentiality of the disclosed information with reasonable care."
+doc_37f1b86b679acf37,regulations,,,external_source,"CRACKLAW DATA MANAGEMENT GUIDELINES
+
+This document outlines guidelines for raw data collection and ingestion. These guidelines apply to all developers working on CrackLaw AI backend systems.
+
+1. Ingestion Requirements
+
+All files must undergo integrity check (MD5 or SHA-256).
+
+2. Chunking Requirements
+
+Documents should be chunked by Act, Chapter, or Section when possible."
+doc_58215be946313f57,judgments,,sample_judgment,external_source,"<judgment>
+ <court>Supreme Court of India</court>
+ <case_number>Civil Appeal No. 1234 of 2026</case_number>
+ <title>State of Karnataka v. Union of India</title>
+ <date>2026-06-15</date>
+ <judges>
+ <judge>Justice A. B. Shah</judge>
+ <judge>Justice C. D. Patel</judge>
+ </judges>
+ <body_text>The appeal is allowed. The judgment of the High Court is set aside.
+ We direct that the status quo be maintained.</body_text>
+</judgment>"
+doc_74ce62ad043dcd88,legal_qa,,,external_source,"Context: Air (Prevention and Control of Pollution) Act, 1981
+Question: What is the penalty for air pollution under the Air Act 1981?
+Answer: Under Section 37, whoever fails to comply with the provisions of section 21 or section 22 shall be punishable with imprisonment for a term which shall not be less than one year and six months.
+
+---
+
+Context: Section 2(a) of the Air Act 1981
+Question: What is the definition of air pollutant?
+Answer: Any solid, liquid or gaseous substance present in the atmosphere in such concentration as may be or tend to be injurious to human beings, other living creatures or plants."
+doc_845315979bab58d4,miscellaneous,,,external_source,"Columns: Act Name, Year, Subject, Jurisdiction
+Row 1: Act Name: Air Act | Year: 1981 | Subject: Environment | Jurisdiction: India
+Row 2: Act Name: Water Act | Year: 1974 | Subject: Environment | Jurisdiction: India
+Row 3: Act Name: Indian Penal Code | Year: 1860 | Subject: Criminal Law | Jurisdiction: India"

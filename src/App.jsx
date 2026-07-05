@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Statistics from './components/Statistics';
@@ -6,8 +7,9 @@ import WhyChoose from './components/WhyChoose';
 import DemoPreview from './components/DemoPreview';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import ChatPage from './components/ChatPage';
 
-export default function App() {
+function LandingPage() {
   return (
     <div className="app">
       <Navbar />
@@ -21,3 +23,13 @@ export default function App() {
     </div>
   );
 }
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/chat" element={<ChatPage />} />
+    </Routes>
+  );
+}
+

@@ -1,0 +1,59 @@
+====================================================
+             TRANSFORMER DECODER STACK              
+====================================================
+Target IDs -> Shape: (batch_size, tgt_seq_len)
+  ↓
+Input Representation (Vocab: 5000, Dim: 512)
+  ↓
+--- Decoder Block 1 ---
+    |-> Masked Multi-Head Self-Attention
+    |   -> Residual + LayerNorm
+    |-> Cross-Attention (with Encoder States)
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+--- Decoder Block 2 ---
+    |-> Masked Multi-Head Self-Attention
+    |   -> Residual + LayerNorm
+    |-> Cross-Attention (with Encoder States)
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+--- Decoder Block 3 ---
+    |-> Masked Multi-Head Self-Attention
+    |   -> Residual + LayerNorm
+    |-> Cross-Attention (with Encoder States)
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+--- Decoder Block 4 ---
+    |-> Masked Multi-Head Self-Attention
+    |   -> Residual + LayerNorm
+    |-> Cross-Attention (with Encoder States)
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+--- Decoder Block 5 ---
+    |-> Masked Multi-Head Self-Attention
+    |   -> Residual + LayerNorm
+    |-> Cross-Attention (with Encoder States)
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+--- Decoder Block 6 ---
+    |-> Masked Multi-Head Self-Attention
+    |   -> Residual + LayerNorm
+    |-> Cross-Attention (with Encoder States)
+    |   -> Residual + LayerNorm
+    |-> Feed Forward Network
+    |   -> Residual + LayerNorm
+  ↓
+Final Layer Normalization
+  ↓
+Decoded Hidden States -> Shape: (batch_size, tgt_seq_len, 512)
+====================================================

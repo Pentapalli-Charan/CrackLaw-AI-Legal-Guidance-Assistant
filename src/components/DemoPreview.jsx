@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import {
   Scale, Send, RotateCcw, Share2, BookOpen,
   CheckCircle2, Gavel, FileText, ExternalLink,
@@ -6,6 +7,7 @@ import {
 import './DemoPreview.css';
 
 export default function DemoPreview() {
+  const navigate = useNavigate();
   return (
     <section className="demo-preview section" id="demo">
       <div className="demo-glow" />
@@ -120,16 +122,16 @@ export default function DemoPreview() {
 
           {/* Suggested Prompts */}
           <div className="demo-suggestions">
-            <div className="demo-suggestion-pill">Draft a contract template</div>
-            <div className="demo-suggestion-pill">Explain Section 302 IPC</div>
-            <div className="demo-suggestion-pill">Tenant rights in Maharashtra</div>
-            <div className="demo-suggestion-pill">Company registration process</div>
+            <div className="demo-suggestion-pill" style={{ cursor: 'pointer' }} onClick={() => navigate('/chat')}>Draft a contract template</div>
+            <div className="demo-suggestion-pill" style={{ cursor: 'pointer' }} onClick={() => navigate('/chat')}>Explain Section 302 IPC</div>
+            <div className="demo-suggestion-pill" style={{ cursor: 'pointer' }} onClick={() => navigate('/chat')}>Tenant rights in Maharashtra</div>
+            <div className="demo-suggestion-pill" style={{ cursor: 'pointer' }} onClick={() => navigate('/chat')}>Company registration process</div>
           </div>
 
           {/* Input Bar */}
           <div className="demo-input-bar">
-            <div className="demo-input-field">Ask CrackLaw AI anything about law...</div>
-            <button className="demo-input-send" aria-label="Send">
+            <div className="demo-input-field" style={{ cursor: 'pointer' }} onClick={() => navigate('/chat')}>Ask CrackLaw AI anything about law...</div>
+            <button className="demo-input-send" aria-label="Send" style={{ cursor: 'pointer' }} onClick={() => navigate('/chat')}>
               <Send size={18} color="#ffffff" />
             </button>
           </div>

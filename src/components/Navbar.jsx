@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Scale, ArrowRight } from 'lucide-react';
 import './Navbar.css';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Features', href: '#features' },
-  { label: 'AI Assistant', href: '#demo' },
+  { label: 'AI Assistant', href: '/chat', isRoute: true },
   { label: 'Legal Research', href: '#why-choose' },
   { label: 'About', href: '#testimonials' },
 ];
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -43,14 +45,20 @@ export default function Navbar() {
           </a>
 
           <div className="navbar-links">
-            {navLinks.map((link) => (
-              <a key={link.label} href={link.href} className="navbar-link">
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.isRoute ? (
+                <a key={link.label} href={link.href} className="navbar-link" onClick={(e) => { e.preventDefault(); navigate(link.href); }}>
+                  {link.label}
+                </a>
+              ) : (
+                <a key={link.label} href={link.href} className="navbar-link">
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
 
-          <button className="btn-primary navbar-cta desktop">
+          <button className="btn-primary navbar-cta desktop" onClick={() => navigate('/chat')}>
             Start AI Consultation <ArrowRight size={16} />
           </button>
 
@@ -72,12 +80,12 @@ export default function Navbar() {
             key={link.label}
             href={link.href}
             className="navbar-link"
-            onClick={() => setMobileOpen(false)}
+            onClick={(e) => { if (link.isRoute) { e.preventDefault(); navigate(link.href); } setMobileOpen(false); }}
           >
             {link.label}
           </a>
         ))}
-        <button className="btn-primary navbar-cta" onClick={() => setMobileOpen(false)}>
+        <button className="btn-primary navbar-cta" onClick={() => { navigate('/chat'); setMobileOpen(false); }}>
           Start AI Consultation <ArrowRight size={16} />
         </button>
       </div>

@@ -1,0 +1,6 @@
+{
+  "epoch": 199,
+  "global_step": 200,
+  "train_loss": 0.36080828309059143,
+  "val_loss": 0.0
+}

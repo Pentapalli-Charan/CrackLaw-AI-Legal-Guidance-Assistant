@@ -9,6 +9,7 @@ from src.ai.llm_gateway import (
     OllamaProvider,
     OpenRouterProvider
 )
+from src.ai.cracklaw_provider import CrackLawLMProvider
 
 logger = logging.getLogger("CrackLaw.AI.ProviderFactory")
 
@@ -32,8 +33,10 @@ class ProviderFactory:
             return OllamaProvider(config, model_name)
         elif provider_name == "openrouter":
             return OpenRouterProvider(config, model_name)
+        elif provider_name == "cracklaw":
+            return CrackLawLMProvider(config, model_name)
         else:
             raise LLMProviderError(
                 f"Unsupported LLM Provider requested: '{provider_name}'. "
-                f"Choose from: openai, anthropic, gemini, ollama, openrouter."
+                f"Choose from: openai, anthropic, gemini, ollama, openrouter, cracklaw."
             )

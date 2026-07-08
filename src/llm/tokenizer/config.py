@@ -8,7 +8,7 @@ class TokenizerConfig:
     """Configuration for the CrackLaw BPE Tokenizer."""
     
     # Target vocabulary size
-    vocab_size: int = 5000
+    vocab_size: int = 32000
     
     # Pre-tokenization regex pattern (splits by space/punctuation)
     # This prevents the BPE algorithm from merging characters across words.

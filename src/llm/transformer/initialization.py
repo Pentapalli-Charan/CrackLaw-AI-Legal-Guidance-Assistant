@@ -1,5 +1,7 @@
 import torch.nn as nn
 
+import math
+
 class WeightInitializer:
     """
     Applies proper weight initialization strategies to PyTorch modules.
@@ -7,16 +9,18 @@ class WeightInitializer:
     """
     
     @staticmethod
-    def init_feed_forward(linear_layer: nn.Linear, activation_name: str = "relu"):
+    def init_feed_forward(linear_layer: nn.Linear, activation_name: str = "relu", num_layers: int = 1):
         """
         Initializes a linear layer based on the activation function that follows it.
-        
-        Args:
-            linear_layer: The nn.Linear module to initialize.
-            activation_name: The activation function used after this layer.
+        Includes GPT-2 style depth scaling.
         """
         name = activation_name.lower().strip()
         
+        # GPT-2 style scaled initialization for deeper layers
+        std = 0.02
+        if num_layers > 1:
+            std = std / math.sqrt(2 * num_layers)
+
         if name == "relu":
             # Kaiming (He) Normal Initialization is optimal for ReLU
             nn.init.kaiming_normal_(linear_layer.weight, nonlinearity='relu')

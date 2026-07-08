@@ -1,0 +1,38 @@
+{
+  "categories": {
+    "Constitution": {
+      "source_type": "Primary Legislation",
+      "jurisdiction": "India",
+      "language": "en, hi",
+      "update_frequency": "As amended",
+      "copyright_license": "Public Domain",
+      "expected_folder_location": "datasets/sources/Constitution"
+    },
+    "BNS": {
+      "source_type": "Primary Legislation",
+      "jurisdiction": "India",
+      "language": "en, hi",
+      "update_frequency": "Static",
+      "copyright_license": "Public Domain",
+      "expected_folder_location": "datasets/sources/BNS"
+    },
+    "Supreme_Court_Judgments": {
+      "source_type": "Judicial Pronouncement",
+      "jurisdiction": "Supreme Court of India",
+      "language": "en",
+      "update_frequency": "Daily",
+      "copyright_license": "Public Domain",
+      "expected_folder_location": "datasets/sources/Supreme_Court_Judgments"
+    }
+  },
+  "global_metadata_schema": [
+    "source_name",
+    "source_type",
+    "jurisdiction",
+    "language",
+    "version",
+    "publication_date",
+    "update_frequency",
+    "copyright_license"
+  ]
+}

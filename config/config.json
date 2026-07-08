@@ -16,8 +16,8 @@
     "log_file": "logs/cracklaw.log"
   },
   "ai": {
-    "llm_provider": "gemini",
-    "model_name": "gemini-2.0-flash",
+    "llm_provider": "cracklaw",
+    "model_name": "cracklaw-v1",
     "temperature": 0.2,
     "max_tokens": 1024,
     "max_retries": 3,
@@ -86,13 +86,76 @@
       "skip_duplicates": true
     },
     "classification": {
-      "laws": ["act", "amendment", "statute", "enactment", "legislation", "schedule", "constitution", "repeal"],
-      "judgments": ["versus", "vs.", "appeal", "respondent", "petitioner", "appellant", "court of", "hon'ble", "decree", "bench", "judgment"],
-      "contracts": ["agreement", "contract", "lease", "covenant", "warranty", "nda", "indemnification", "parties", "hereby agreed", "whereas"],
-      "legal_qa": ["question:", "answer:", "q:", "a:", "faq", "query", "response"],
-      "legal_nlp": ["token", "annotations", "ner", "tagger", "dataset", "corpus", "classification task", "labeled"],
-      "notifications": ["notification", "gazette", "circular", "public notice", "issued by the ministry", "orders of the government"],
-      "regulations": ["regulation", "guidelines", "compliance", "rulemaking", "directive", "standards"]
+      "laws": [
+        "act",
+        "amendment",
+        "statute",
+        "enactment",
+        "legislation",
+        "schedule",
+        "constitution",
+        "repeal"
+      ],
+      "judgments": [
+        "versus",
+        "vs.",
+        "appeal",
+        "respondent",
+        "petitioner",
+        "appellant",
+        "court of",
+        "hon'ble",
+        "decree",
+        "bench",
+        "judgment"
+      ],
+      "contracts": [
+        "agreement",
+        "contract",
+        "lease",
+        "covenant",
+        "warranty",
+        "nda",
+        "indemnification",
+        "parties",
+        "hereby agreed",
+        "whereas"
+      ],
+      "legal_qa": [
+        "question:",
+        "answer:",
+        "q:",
+        "a:",
+        "faq",
+        "query",
+        "response"
+      ],
+      "legal_nlp": [
+        "token",
+        "annotations",
+        "ner",
+        "tagger",
+        "dataset",
+        "corpus",
+        "classification task",
+        "labeled"
+      ],
+      "notifications": [
+        "notification",
+        "gazette",
+        "circular",
+        "public notice",
+        "issued by the ministry",
+        "orders of the government"
+      ],
+      "regulations": [
+        "regulation",
+        "guidelines",
+        "compliance",
+        "rulemaking",
+        "directive",
+        "standards"
+      ]
     },
     "datasets": [
       {
@@ -102,8 +165,12 @@
         "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
         "version": "1.0.0",
         "license": "Public Domain",
-        "document_types": ["notifications"],
-        "supported_languages": ["en"]
+        "document_types": [
+          "notifications"
+        ],
+        "supported_languages": [
+          "en"
+        ]
       },
       {
         "name": "sample_local_dataset",
@@ -112,8 +179,12 @@
         "source_path": "datasets/downloads/local_import_test",
         "version": "1.0.0",
         "license": "Custom",
-        "document_types": ["contracts"],
-        "supported_languages": ["en"]
+        "document_types": [
+          "contracts"
+        ],
+        "supported_languages": [
+          "en"
+        ]
       }
     ]
   },

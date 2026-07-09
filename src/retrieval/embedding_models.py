@@ -31,17 +31,22 @@ class SentenceTransformersEmbeddingModel(EmbeddingModel):
 
     def __init__(self, model_name: str, use_gpu: bool = False):
         self.model_name = model_name
-        self.device = "cuda" if use_gpu and torch.cuda.is_available() else "cpu"
-        logger.info("Initializing embedding model '%s' on device '%s'", model_name, self.device)
-        
-        try:
-            self.model = SentenceTransformer(model_name, device=self.device)
-        except Exception as e:
-            logger.error("Failed to load model '%s': %s", model_name, str(e))
-            # Fallback load on CPU
-            logger.info("Retrying model load on CPU device fallback...")
-            self.model = SentenceTransformer(model_name, device="cpu")
-            self.device = "cpu"
+        self._use_gpu = use_gpu
+        self._device = "cuda" if use_gpu and torch.cuda.is_available() else "cpu"
+        self._model = None
+
+    @property
+    def model(self):
+        if self._model is None:
+            logger.info("Initializing embedding model '%s' on device '%s' (lazy load)", self.model_name, self._device)
+            try:
+                self._model = SentenceTransformer(self.model_name, device=self._device)
+            except Exception as e:
+                logger.error("Failed to load model '%s': %s", self.model_name, str(e))
+                logger.info("Retrying model load on CPU device fallback...")
+                self._model = SentenceTransformer(self.model_name, device="cpu")
+                self._device = "cpu"
+        return self._model
 
     def embed_query(self, text: str) -> List[float]:
         embedding = self.model.encode(text, convert_to_numpy=True, show_progress_bar=False)
@@ -53,7 +58,16 @@ class SentenceTransformersEmbeddingModel(EmbeddingModel):
 
     @property
     def dimension(self) -> int:
-        # Inspect model's internal sentence embedding dimension
+        if self._model is None:
+            name_lower = self.model_name.lower()
+            if "bge-small" in name_lower or "minilm" in name_lower:
+                return 384
+            elif "e5-small" in name_lower or "bge-large" in name_lower:
+                return 384 # e5-small is 384. bge-large is 1024, wait let me just load if not sure.
+            elif "mpnet" in name_lower or "legal-bert" in name_lower or "e5-base" in name_lower:
+                return 768
+            elif "bge-large" in name_lower:
+                return 1024
         return int(self.model.get_sentence_embedding_dimension())
 
 

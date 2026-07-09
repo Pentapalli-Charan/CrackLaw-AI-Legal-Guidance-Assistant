@@ -11,25 +11,31 @@ class TokenManager:
         self.model_name = model_name
         self.tokenizer = None
         self._initialized = False
+        self._load_attempted = False
 
+    def _ensure_initialized(self):
+        if self._load_attempted:
+            return
+        self._load_attempted = True
+        
         # Attempt to load a tokenizer from Hugging Face transformers
         try:
             from transformers import AutoTokenizer
             # Suppress excessive logging during download attempt
             logging.getLogger("transformers").setLevel(logging.WARNING)
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name, local_files_only=True)
+            self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, local_files_only=True)
             self._initialized = True
-            logger.info("TokenManager initialized with local tokenizer: %s", model_name)
+            logger.info("TokenManager initialized with local tokenizer: %s", self.model_name)
         except Exception:
             try:
                 from transformers import AutoTokenizer
-                self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+                self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
                 self._initialized = True
-                logger.info("TokenManager initialized with Hugging Face online tokenizer: %s", model_name)
+                logger.info("TokenManager initialized with Hugging Face online tokenizer: %s", self.model_name)
             except Exception as e:
                 logger.warning(
                     "Could not load Hugging Face tokenizer '%s' (%s). Fallback token estimator will be used.",
-                    model_name,
+                    self.model_name,
                     str(e)
                 )
 
@@ -37,6 +43,8 @@ class TokenManager:
         """Estimates or counts the number of tokens in a string."""
         if not text:
             return 0
+
+        self._ensure_initialized()
 
         if self._initialized and self.tokenizer is not None:
             try:
@@ -69,6 +77,8 @@ class TokenManager:
         current_tokens = self.count_tokens(text)
         if current_tokens <= max_tokens:
             return text
+
+        self._ensure_initialized()
 
         # If tokenizer is available, perform exact token-level truncation
         if self._initialized and self.tokenizer is not None:

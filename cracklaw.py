@@ -161,7 +161,7 @@ def cmd_start():
                                  stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
     processes.append(backend_p)
     
-    if wait_for_url("http://127.0.0.1:8000/docs", timeout=30):
+    if wait_for_url("http://127.0.0.1:8000/docs", timeout=120):
         print_status("Backend Ready", "PASS")
     else:
         print_status("Backend failed to start or timed out.", "FAIL")
@@ -174,7 +174,7 @@ def cmd_start():
                                   stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
     processes.append(frontend_p)
     
-    if wait_for_url("http://localhost:5173", timeout=30):
+    if wait_for_url("http://localhost:5173", timeout=120):
         print_status("Frontend Ready", "PASS")
     else:
         print_status("Frontend failed to start or timed out.", "FAIL")
